@@ -1,0 +1,242 @@
+//import global rules 
+@use './SASS/layOuts/globalRules' as *;
+
+//import colors 
+@use "./SASS/helpers/colors" as *;
+
+//import mixins
+@use "./SASS/helpers/Mexins" as *;
+
+//import font
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+//start header
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // @include flex (space-between, none, center, none);
+    padding: 15px 25px;
+    .links {
+        .nav-bar {
+            display: flex;
+            @include listReset;
+            li {
+                padding: 15px;
+                color: $paragraph;
+                a {
+                    font-size: 16px;
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        color: $heading;
+                    }
+                }
+            }
+            .change-color {
+                color: $heading;
+            }
+            .drop-btn {
+                .dropdown {
+                    z-index: 1;
+                    li {
+                        padding: 5px;
+                    }
+                }
+                .one, .two {
+                    position: absolute;
+                    padding: 15px 10px;
+                    margin-top: 20px;
+                    box-shadow: 1px 1px 30px $shadow;
+                    border-radius: 5px;
+                }
+                .one {
+                    left: 110px;
+                }
+            }
+        }
+    }
+    .log-reg {
+        a {
+            @include link ($paragraph, 10px, 16px);
+            &:hover {
+                @include hover;
+            }
+            &:last-child {
+                border: 1px solid $paragraph;
+                border-radius: 15px;
+                &:hover {
+                    border: 1px solid $heading;
+                }
+            }
+        }
+    }
+    .mobile {
+        cursor: pointer;
+    }
+}
+//end header
+
+.root {
+    position: relative;
+}
+//start page content
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    .desc {
+        // position: relative;
+        width: 40%;
+        padding: 15px;
+        h1 {
+            color: $heading;
+            margin-bottom: 50px;
+            font-size: 50px;
+        }
+        p {
+            color: $paragraph;
+            line-height: 25px;
+            font-size: large;
+            margin-bottom: 50px;
+        }
+        button {
+            color: $txt-btn;
+            background-color: $heading;
+            font-size: 18px;
+            padding: 15px 25px;
+            border: 2px solid $heading;
+            border-radius: 20px;
+            transition: .3s ease;
+            margin-bottom: 50px;
+            cursor: pointer;
+            &:hover {
+                color: $heading;
+                background-color: $txt-btn;
+            }
+        }
+        ul {
+            position: absolute;
+            top: 100%;
+            list-style: none;
+            li {
+                float: left;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+    }
+    .image {
+        width: 40%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .mobile-view {
+            display: none;
+        }
+    }
+}
+//end page content
+
+//start aside
+    .popup-aside {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        right: 0;
+        bottom: 0;
+        background-color: $asidg;
+        transition: .5s ease;
+        .nav-aside {
+            width: calc((100% / 3) * 2);
+            height: 100vh;
+            float: right;
+            background-color: $txt-btn;
+            .aside-cont {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    cursor: pointer;
+                    color: $paragraph;
+                    padding: 10px 25px;
+                    &:hover {
+                        color: $heading;
+                    } 
+                }
+                .close {
+                    text-align: right;
+                } 
+                .log {
+                    text-align: center;
+                    margin-top: 60px;
+                }
+                .reg {
+                    text-align: center;
+                    border: 1px solid $paragraph;
+                    border-radius: 15px;
+                    margin: 0 20px;
+                    &:hover {
+                        border: 1px solid $heading;
+                    }
+                }
+            }
+        }
+    }
+//end aside
+
+//media queries
+
+@media (min-width: 993px) {
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    header .links .nav-bar li:not(:first-child) a {
+    display: none;
+    }
+
+    .log-reg {
+        display: none;
+    }
+
+    .mobile {
+        margin-top: -10px;
+        margin-right: 20px;
+        img {
+            display: block;
+        }
+    }
+
+    .container {
+        flex-wrap: wrap-reverse;
+    }
+    .container .image {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .container .desc {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .container .desc ul li img {
+        width: 60px;
+    }
+    .container .image .desktop-view {
+        display: none;
+    }
+    .container .image .mobile-view {
+        display: block;
+    }
+    .container .desc h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}

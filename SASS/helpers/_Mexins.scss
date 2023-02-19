@@ -1,0 +1,30 @@
+//import colors
+@use "../helpers/colors" as *;
+
+@mixin link ($color, $padding, $size) {
+    text-decoration: none;
+    padding: $padding;
+    color: $color;
+    font-size: $size;
+    float: left;
+}
+
+@mixin listReset {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin flex ($just-cont, $direction, $align-items, $wrap) {
+    display: flex;
+    justify-content: $just-cont;
+    flex-direction: $direction;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+}
+
+@mixin hover {
+    &:hover {
+        color: $heading;
+    }
+}

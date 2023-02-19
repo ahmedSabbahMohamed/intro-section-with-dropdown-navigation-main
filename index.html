@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- css file -->
+<link rel="stylesheet" href="./style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
+  
+  <title>Ahmed Sabbah | Intro section with dropdown navigation</title>
+</head>
+<body>
+
+  <!-- START HEADER -->
+  <header>
+    <nav class="links">
+      <ul class="nav-bar">
+        <li><a href=""><img src="./images/logo.svg" alt=""></a></li>
+        <li class="drop-btn">
+          <a class="btn" href="">Features</a>
+          <ul class="dropdown one">
+            <li><a href=""><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
+            <li><a href=""><img src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+            <li><a href=""><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+            <li><a href=""><img src="./images/icon-planning.svg" alt="">Planinng</a></li>
+          </ul>
+        </li>
+        <li class="drop-btn">
+          <a class="btn" href="">Company</a>
+          <ul class="dropdown two">
+            <li><a href="">History</a></li>
+            <li><a href="">Our Team</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+    </nav>
+    <div class="log-reg">
+      <a href="">Login</a>
+      <a href="">Register</a>
+    </div>
+    <div class="mobile">
+      <img src="./images/icon-menu.svg" alt="">
+    </div>
+  </header>
+  <!-- END HEADER -->
+
+  <!-- START PAGE CONTENT -->
+  <main class="root">
+    <div class="container">
+      <div class="desc">
+        <h1>Make <br> remote work</h1>
+        <p>Get your team in sync, no matter your location. Streamline processes. create team rituals. and watch productivity soar.</p>
+        <button>Learn more</button>
+        <ul class="footer">
+          <li><img src = "./images/client-databiz.svg"></li>
+          <li><img src="./images/client-audiophile.svg" alt=""></li>
+          <li><img src="./images/client-meet.svg" alt=""></li>
+          <li><img src="./images/client-maker.svg" alt=""></li>
+        </ul>
+      </div>
+      <div class="image">
+        <img class="desktop-view" src="./images/image-hero-desktop.png" alt="">
+        <img class="mobile-view" src="./images/image-hero-mobile.png" alt="">
+      </div>
+    </div>
+    <!-- START ON MOBILE SCREEN ASIDE -->
+    <aside class="popup-aside">
+      <div class="nav-aside">
+        <ul class="aside-cont">
+          <li class="close"><img src="./images/icon-close-menu.svg" alt=""></li>
+          <li>
+            <a class="btn" href="">Features</a>
+            <ul class="dropdown">
+              <li><a href=""><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
+              <li><a href=""><img src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+              <li><a href=""><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+              <li><a href=""><img src="./images/icon-planning.svg" alt="">Planinng</a></li>
+            </ul>
+          </li>
+          <li >
+            <a class="btn" href="">Company</a>
+            <ul class="dropdown">
+              <li><a href="">History</a></li>
+              <li><a href="">Our Team</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+          <li class="log">Login</li>
+          <li class="reg">Register</li>
+        </ul>
+      </div>
+    </aside>
+    <!-- END ON MOBILE SCREEN ASIDE -->
+  </main>
+  <!-- END PAGE CONTENT -->
+
+  <script src="./index.js"></script>
+</body>
+</html>

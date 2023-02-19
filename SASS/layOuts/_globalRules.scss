@@ -1,0 +1,48 @@
+//import mixins
+@use "../helpers/Mexins" as *;
+
+//colors
+@use "../helpers/colors" as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.btn::after {
+    content: url(./images/icon-arrow-down.svg);
+    margin-left: 5px;
+}
+.active::after {
+    content: url(./images/icon-arrow-up.svg);
+    margin-left: 5px;
+}
+
+
+.dropdown {
+    @include listReset;
+    margin-top: 10px;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+a {
+    color: $paragraph;
+    text-decoration: none;
+    @include hover;
+}
+
+a img {
+    margin-right: 10px;
+}
+
+.change-color {
+    color: $heading;
+}
