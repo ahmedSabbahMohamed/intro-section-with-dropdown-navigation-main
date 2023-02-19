@@ -1,11 +1,5 @@
 let dropdownButton = document.querySelectorAll(".btn");
 let dropButton = document.querySelectorAll(".drop-btn");
-let links = document.querySelectorAll("a");
-
-//preventDefault all <a>
-links.forEach(ele => {
-    ele.addEventListener("click", e => e.preventDefault());
-});
 
 dropdownButton.forEach(ele => {
     ele.addEventListener("click", e => {

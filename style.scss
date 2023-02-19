@@ -21,18 +21,6 @@ header {
         .nav-bar {
             display: flex;
             @include listReset;
-            li {
-                padding: 15px;
-                color: $paragraph;
-                a {
-                    font-size: 16px;
-                    color: inherit;
-                    text-decoration: none;
-                    &:hover {
-                        color: $heading;
-                    }
-                }
-            }
             .change-color {
                 color: $heading;
             }
@@ -87,7 +75,6 @@ header {
     flex-direction: row;
     align-items: center;
     .desc {
-        // position: relative;
         width: 40%;
         padding: 15px;
         h1 {
@@ -198,7 +185,7 @@ header {
 
 @media (max-width: 992px) {
 
-    header .links .nav-bar li:not(:first-child) a {
+    header .links .nav-bar li:not(:first-child) {
     display: none;
     }
 
